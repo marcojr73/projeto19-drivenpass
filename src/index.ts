@@ -16,15 +16,15 @@ app.use(cors())
 app.use(express.json())
 dotenv.config()
 
-app.use(cardRouter)
 app.use(authRouter)
 app.use(credentialRouter)
+app.use(cardRouter)
 app.use(securityNote)
 app.use(wifiRouter)
 
 app.use(errorHandler)
 
-const PORT = +process.env.PORT || 5000
+const PORT = +process.env.PORT || 4000
 
 app.listen(PORT,()=>{
     console.log(`Server up on port ${PORT}`)
