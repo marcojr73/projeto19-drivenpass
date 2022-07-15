@@ -5,6 +5,11 @@ async function insertAnNewCredential(dataCredentials: credentialsData){
     await credentialsRepositories.insertAnNewCredentialOnBank(dataCredentials)
 }
 
+async function getAllCredentialsPerUser(){
+
+}
+
 export {
-    insertAnNewCredential
+    insertAnNewCredential,
+    getAllCredentialsPerUser
 }

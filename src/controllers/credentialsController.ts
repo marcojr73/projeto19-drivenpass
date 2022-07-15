@@ -15,7 +15,13 @@ async function insertNewCredential(req: Request, res: Response){
 }
 
 async function getCredential(req: Request, res: Response){
+    const token: string = req.headers.authorization.replace("Bearer", "").trim()
+    const userId = await utils.validatetionAndSendUserIfTokenCorrect(token)
+    const allCredentials = await credentialsServices.getAllCredentialsPerUser()
+    res.send("bala azul")
+}
 
+async function getAllCredentials(req: Request, res: Response){
     res.send("bala azul")
 }
 
@@ -27,5 +33,6 @@ async function deleteCredential(req: Request, res: Response){
 export {
     insertNewCredential,
     getCredential,
+    getAllCredentials,
     deleteCredential
 }
