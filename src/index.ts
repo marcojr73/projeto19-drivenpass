@@ -16,9 +16,9 @@ app.use(cors())
 app.use(express.json())
 dotenv.config()
 
-app.use(cardRouter)
 app.use(authRouter)
 app.use(credentialRouter)
+app.use(cardRouter)
 app.use(securityNote)
 app.use(wifiRouter)
 
