@@ -3,20 +3,24 @@ import * as authService from "../services/authServices.js";
 
 async function signUp(req: Request, res: Response){
 
-    const {email, password}: {email: string, password: string} = req.body
+    let {email, password}: {email: string, password: string} = req.body
 
-    await authService.validateEmail(email)
-    const passCrypt = authService.encryptedPassword(password)
+    await authService.validateIfEmailIsInUse(email)
+    password = authService.encryptedPassword(password)
+    authService.registerUser({email, password})
 
-
-    res.send("bala azul")
+    res.status(201).send("User register sucessfull")
 }
 
 async function signIn(req: Request, res: Response){
     
+    const {email, password}: {email: string, password: string} = req.body
 
+    const user = await authService.verifyAndGetIfUserExists(email)
+    authService.verifyPasswordIsCorrect(password, user.password)
+    const token = authService.generateToken(user.id)
 
-    res.send("bala azul")
+    res.status(200).send(token)
 }
 
 export {

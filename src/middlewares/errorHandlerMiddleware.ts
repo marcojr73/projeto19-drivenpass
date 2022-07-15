@@ -4,10 +4,9 @@ export default async function errorHandler(error, req: Request, res: Response, n
     if(error.isJoi){
         return res.status(422).send("you send incorrect data")
     }
-    console.log(error.status, error.message)
     if(error){
         return res.status(error.status).send(error.message)
     }
-
+    
     res.status(500).send("an internal error occurred")
 }
