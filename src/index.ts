@@ -18,8 +18,8 @@ dotenv.config()
 
 app.use(authRouter)
 app.use(credentialRouter)
-app.use(cardRouter)
 app.use(securityNote)
+app.use(cardRouter)
 app.use(wifiRouter)
 
 app.use(errorHandler)

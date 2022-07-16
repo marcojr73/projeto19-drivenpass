@@ -12,7 +12,13 @@ const dataCredentialsisCorrect = joi.object({
     title: joi.string().min(1).required()
 })
 
+const dataNotesIsCorrect = joi.object({
+    title: joi.string().max(50).required(),
+    note: joi.string().max(1000).required()
+})
+
 export {
     dataSignInUp,
-    dataCredentialsisCorrect
+    dataCredentialsisCorrect,
+    dataNotesIsCorrect
 }

@@ -5,7 +5,6 @@ import Cryptr from "cryptr"
 dotenv.config()
 
 async function validatetionAndSendUserIfTokenCorrect(token: string){
-
     if (!token) throw {
         status: 401,
         message: "Token not sent"
@@ -28,7 +27,14 @@ function encryptPassword(password: string){
     return cryptr.encrypt(password)
 }
 
+function decryptPassword(password: string){
+    const {KeyCryptr} = process.env
+    const cryptr = new Cryptr(KeyCryptr)
+    return cryptr.decrypt(password)
+}
+
 export {
     validatetionAndSendUserIfTokenCorrect,
-    encryptPassword
+    encryptPassword,
+    decryptPassword
 }

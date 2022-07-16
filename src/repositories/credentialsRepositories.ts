@@ -10,6 +10,27 @@ async function insertAnNewCredentialOnBank(dataCredentials: credentialsData){
     })
 }
 
+async function getCredentialById(id: number){
+    return await client.credentials.findUnique({
+        where: {id}
+    })
+}
+
+async function listAllCredentialsByUserId(userId: number){
+    return await client.credentials.findMany({
+        where: {userId}
+    })
+}
+
+async function deleteCrdentialById(id: number){
+    return await client.credentials.delete({
+        where: {id}
+    })
+}
+
 export{
-    insertAnNewCredentialOnBank
+    insertAnNewCredentialOnBank,
+    listAllCredentialsByUserId,
+    getCredentialById,
+    deleteCrdentialById
 } 

@@ -4,9 +4,9 @@ import { validationDataSentForNewCredential } from "../middlewares/credentialsMi
 
 const credentialRouter = Router()
 
-credentialRouter.post("/credentials", validationDataSentForNewCredential, insertNewCredential)
-credentialRouter.get("/credentials/:id", getCredential)
+credentialRouter.post("/credentials/create", validationDataSentForNewCredential, insertNewCredential)
 credentialRouter.get("/credentials", getAllCredentials)
-credentialRouter.delete("/credentials/:id", deleteCredential)
+credentialRouter.get("/credentials/:id", getCredential)
+credentialRouter.delete("/credentials/delete/:id", deleteCredential)
 
 export default credentialRouter
