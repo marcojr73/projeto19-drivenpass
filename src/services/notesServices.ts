@@ -2,7 +2,7 @@ import * as notesRepositories from "../repositories/notesRepositories.js"
 
 import {notesData} from "../repositories/notesRepositories.js"
 
-async function verifyTitleIsUnique(allNotes, title){
+async function verifyTitleIsUnique(allNotes, title: string){
     allNotes.forEach(notes => {
         if(notes.title === title) throw {
             status: 409,

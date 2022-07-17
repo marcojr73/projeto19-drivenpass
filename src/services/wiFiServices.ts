@@ -1,11 +1,13 @@
 import * as wifiRepositories from "../repositories/wifiRepositories.js"
 
+import {wifiData} from "../repositories/wifiRepositories.js"
+
 
 async function getAllWireless(userId: number){
     return await wifiRepositories.getAllWirelessByUserId(userId)
 }
 
-async function insertNewWireless(dataWifi){
+async function insertNewWireless(dataWifi: wifiData){
     await wifiRepositories.insertNewWireless(dataWifi)
 }
 
@@ -22,9 +24,14 @@ async function getWifiAndVerifyMaster(id: number, userId: number){
     return wifi
 }
 
+async function deleteWifi(id: number){
+    await wifiRepositories.deleteWifiById(id)
+}
+
 
 export {
     getAllWireless,
     insertNewWireless,
-    getWifiAndVerifyMaster
+    getWifiAndVerifyMaster,
+    deleteWifi
 }

@@ -5,7 +5,7 @@ import * as credentialsServices from "../services/credentialsServices.js"
 
 async function insertNewCredential(req: Request, res: Response){
     let {url, userName, password, title}: {url: string, userName: string, password: string, title: string} = req.body
-    const token: string = req.headers.authorization.replace("Bearer", "").trim()
+    const token: string = req.headers.authorization?.replace("Bearer", "").trim()
     
     const userId = await utils.validatetionAndSendUserIfTokenCorrect(token)
     password = utils.encryptPassword(password)
@@ -17,7 +17,7 @@ async function insertNewCredential(req: Request, res: Response){
 
 async function getCredential(req: Request, res: Response){
     const credentialId: number =  parseInt(req.params.id)
-    const token: string = req.headers.authorization.replace("Bearer", "").trim()
+    const token: string = req.headers.authorization?.replace("Bearer", "").trim()
 
     const userId = await utils.validatetionAndSendUserIfTokenCorrect(token)
     let credential = await credentialsServices.getCredentialAndVerifyMaster(credentialId, userId)
@@ -27,7 +27,7 @@ async function getCredential(req: Request, res: Response){
 }
 
 async function getAllCredentials(req: Request, res: Response){
-    const token: string = req.headers.authorization.replace("Bearer", "").trim()
+    const token: string = req.headers.authorization?.replace("Bearer", "").trim()
 
     const userId = await utils.validatetionAndSendUserIfTokenCorrect(token)
     let allCredentials = await credentialsServices.getAllCredentialsPerUser(userId)
@@ -37,7 +37,7 @@ async function getAllCredentials(req: Request, res: Response){
 }
 
 async function deleteCredential(req: Request, res: Response){
-    const token: string = req.headers.authorization.replace("Bearer", "").trim()
+    const token: string = req.headers.authorization?.replace("Bearer", "").trim()
     const credentialId: number =  parseInt(req.params.id)
     
     const userId: number = await utils.validatetionAndSendUserIfTokenCorrect(token)

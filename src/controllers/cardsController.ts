@@ -6,7 +6,7 @@ import {cardsData} from "../repositories/cardsRepositories.js"
 
 async function insertNewCard(req: Request, res: Response){
     let {number, nameCard, cvc, expirationDate, password, isVirtual, type, title}: cardsData = req.body
-    const token: string = req.headers.authorization.replace("Bearer", "").trim()
+    const token: string = req.headers.authorization?.replace("Bearer", "").trim()
     
     const userId = await utils.validatetionAndSendUserIfTokenCorrect(token)
     const allCards = await servicesCard.getAllCards(userId)
@@ -19,7 +19,7 @@ async function insertNewCard(req: Request, res: Response){
 }
 
 async function getAllCards(req: Request, res: Response){
-    const token: string = req.headers.authorization.replace("Bearer", "").trim()
+    const token: string = req.headers.authorization?.replace("Bearer", "").trim()
 
     const userId = await utils.validatetionAndSendUserIfTokenCorrect(token)
     let allCard = await servicesCard.getAllCards(userId)
@@ -29,7 +29,7 @@ async function getAllCards(req: Request, res: Response){
 }
 
 async function getAnCard(req: Request, res: Response){
-    const token: string = req.headers.authorization.replace("Bearer", "").trim()
+    const token: string = req.headers.authorization?.replace("Bearer", "").trim()
     const cardId: number =  parseInt(req.params.id)
     
     const userId: number = await utils.validatetionAndSendUserIfTokenCorrect(token)
@@ -41,7 +41,7 @@ async function getAnCard(req: Request, res: Response){
 }
 
 async function deleteAnCard(req: Request, res: Response){
-    const token: string = req.headers.authorization.replace("Bearer", "").trim()
+    const token: string = req.headers.authorization?.replace("Bearer", "").trim()
     const cardId: number =  parseInt(req.params.id)
     
     const userId: number = await utils.validatetionAndSendUserIfTokenCorrect(token)

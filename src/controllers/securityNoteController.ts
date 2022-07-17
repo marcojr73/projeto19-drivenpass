@@ -5,7 +5,7 @@ import * as utils from "../utils/utils.js"
 
 async function registerAnNewSecurityNote(req: Request, res: Response){
     const {title, note}: {title: string, note: string} =  req.body
-    const token: string = req.headers.authorization.replace("Bearer", "").trim()
+    const token: string = req.headers.authorization?.replace("Bearer", "").trim()
 
     const userId = await utils.validatetionAndSendUserIfTokenCorrect(token)
     const allNotes = await notesServices.getAllNotes(userId)
@@ -17,7 +17,7 @@ async function registerAnNewSecurityNote(req: Request, res: Response){
 
 async function getNote(req: Request, res: Response){
     const id: number = parseInt(req.params.id)
-    const token: string = req.headers.authorization.replace("Bearer", "").trim()
+    const token: string = req.headers.authorization?.replace("Bearer", "").trim()
     
     const userId = await utils.validatetionAndSendUserIfTokenCorrect(token)
     const note = await notesServices.getNoteAndVerifyMaster(id, userId)
@@ -26,7 +26,7 @@ async function getNote(req: Request, res: Response){
 }
 
 async function getAllNotes(req: Request, res: Response){
-    const token: string = req.headers.authorization.replace("Bearer", "").trim()
+    const token: string = req.headers.authorization?.replace("Bearer", "").trim()
 
     const userId = await utils.validatetionAndSendUserIfTokenCorrect(token)
     const allNotes = await notesServices.getAllNotes(userId)
@@ -36,7 +36,7 @@ async function getAllNotes(req: Request, res: Response){
 
 async function deleteAnNote(req: Request, res: Response){
     const id: number = parseInt(req.params.id)
-    const token: string = req.headers.authorization.replace("Bearer", "").trim()
+    const token: string = req.headers.authorization?.replace("Bearer", "").trim()
     
     const userId = await utils.validatetionAndSendUserIfTokenCorrect(token)
     await notesServices.getNoteAndVerifyMaster(id, userId)

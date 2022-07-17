@@ -1,6 +1,8 @@
 import * as cardsRepositories from "../repositories/cardsRepositories.js"
 import * as utils from "../utils/utils.js"
 
+import {cardsData} from "../repositories/cardsRepositories.js"
+
 
 async function verifyTitleCardIsUnique(title: string, allCards){
     allCards.forEach(card => {
@@ -15,7 +17,7 @@ async function getAllCards(userId: number){
     return await cardsRepositories.getAllCardsByUserId(userId)
 }
 
-async function insertNewCard(cardData){
+async function insertNewCard(cardData: cardsData){
     await cardsRepositories.insertAnNewCardOnBank(cardData)
 }
 
@@ -41,7 +43,7 @@ async function getCardAndVerifyMaster(cardId: number, userId){
     return card
 }
 
-async function deleteCard(cardId){
+async function deleteCard(cardId: number){
     await cardsRepositories.deleteCardById(cardId)
 }
 

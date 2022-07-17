@@ -5,7 +5,7 @@ import * as wifiServices from "../services/wiFiServices.js"
 
 async function registerAnNewWifi(req: Request, res: Response){
     let {nameWireless, password, title}: {nameWireless: string, password: string, title: string} = req.body
-    const token: string = req.headers.authorization.replace("Bearer", "").trim()
+    const token: string = req.headers.authorization?.replace("Bearer", "").trim()
 
     const userId = await utils.validatetionAndSendUserIfTokenCorrect(token)
     password = utils.encryptPassword(password) 
@@ -16,7 +16,7 @@ async function registerAnNewWifi(req: Request, res: Response){
 
 async function getWifi(req: Request, res: Response){
     const id: number = parseInt(req.params.id)
-    const token: string = req.headers.authorization.replace("Bearer", "").trim()
+    const token: string = req.headers.authorization?.replace("Bearer", "").trim()
     
     const userId = await utils.validatetionAndSendUserIfTokenCorrect(token)
     const wifi = await wifiServices.getWifiAndVerifyMaster(id, userId)
@@ -26,9 +26,9 @@ async function getWifi(req: Request, res: Response){
 }
 
 async function getAllWifi(req: Request, res: Response){
-    const token: string = req.headers.authorization.replace("Bearer", "").trim()
+    const token: string = req.headers.authorization?.replace("Bearer", "").trim()
     
-    const userId = await utils.validatetionAndSendUserIfTokenCorrect(token)
+    const userId: number = await utils.validatetionAndSendUserIfTokenCorrect(token)
     let allWireless = await wifiServices.getAllWireless(userId)
     allWireless = await utils.decryptAllPassword(allWireless)
     
@@ -37,11 +37,13 @@ async function getAllWifi(req: Request, res: Response){
 
 async function deleteAnWifi(req: Request, res: Response){
     const id: number = parseInt(req.params.id)
-    const token: string = req.headers.authorization.replace("Bearer", "").trim()
+    const token: string = req.headers.authorization?.replace("Bearer", "").trim()
     
-    const userId = await utils.validatetionAndSendUserIfTokenCorrect(token)
+    const userId: number = await utils.validatetionAndSendUserIfTokenCorrect(token)
+    await wifiServices.getWifiAndVerifyMaster(id, userId)
+    await wifiServices.deleteWifi(id)
 
-    res.status(204).send("bala azul")
+    res.status(204).send("wifi deleted sucessfull")
 }
 
 export {
