@@ -28,7 +28,7 @@ Install my-project with npm and configure .env
   POST /sign-up
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `body` |`email` | `string` | **Required**  |
 | `body` |`password` | `string` | **Required** |
@@ -39,7 +39,7 @@ Install my-project with npm and configure .env
   POST /sign-in
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `body` |`email` | `string` | **Required**  |
 | `body` |`password` | `string` | **Required** |
@@ -50,7 +50,7 @@ Install my-project with npm and configure .env
   POST /card/create
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 | `body` |`number` | `string` | **Required**  |
@@ -69,7 +69,7 @@ types must be credit or debit
   GET /card
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 
@@ -79,7 +79,7 @@ types must be credit or debit
   GET /card/:id
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 
@@ -89,7 +89,7 @@ types must be credit or debit
   DELETE /card/delete/:id
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 
@@ -99,7 +99,7 @@ types must be credit or debit
   GET /credentials/create
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `string` | **Required**  |
 | `body` |`url` | `string` | **Required**  |
@@ -113,7 +113,7 @@ types must be credit or debit
   GET /credentials
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 
@@ -123,7 +123,7 @@ types must be credit or debit
   GET /credentials/:id
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 
@@ -133,7 +133,7 @@ types must be credit or debit
   DELETE /credentials/delete/:id
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 
@@ -143,7 +143,7 @@ types must be credit or debit
   POST /notes/create
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 | `body` |`title` | `string` | **Required**  |
@@ -155,7 +155,7 @@ types must be credit or debit
   GET /notes/
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 
@@ -165,7 +165,7 @@ types must be credit or debit
   GET /notes/:id
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 
@@ -175,7 +175,7 @@ types must be credit or debit
   DELETE /notes/delete/:id
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 
@@ -185,7 +185,7 @@ types must be credit or debit
   POST /wifi/create
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 | `body` |`nameWireless` | `string` | **Required**  |
@@ -198,7 +198,7 @@ types must be credit or debit
   GET /wifi
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 
@@ -209,7 +209,7 @@ types must be credit or debit
   GET /wifi/:id
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 
@@ -219,7 +219,7 @@ types must be credit or debit
   DELETE /wifi/:id
 ```
 
-| type |Parameter | Type     |                 |
+| sent by |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 
