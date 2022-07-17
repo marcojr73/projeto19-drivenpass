@@ -4,12 +4,13 @@ import wifi from "@prisma/client"
 
 
 
-async function getAllWirelessByUserId(userId){
+async function getAllWirelessByUserId(userId: number){
     return await client.wifi.findMany({
         select:{
             nameWireless: true,
             password: true,
-            title: true
+            title: true,
+            userId: true
         },
         where: {userId}
     })
@@ -21,7 +22,20 @@ async function insertNewWireless(dataWifi) {
     })
 }
 
+async function getWifiById(id: number){
+    return await client.wifi.findUnique({
+        select:{
+            nameWireless: true,
+            password: true,
+            title: true,
+            userId: true
+        },
+        where: {id}
+    })
+}
+
 export {
     getAllWirelessByUserId,
-    insertNewWireless
+    insertNewWireless,
+    getWifiById
 }

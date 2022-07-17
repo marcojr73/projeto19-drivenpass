@@ -33,8 +33,16 @@ function decryptPassword(password: string){
     return cryptr.decrypt(password)
 }
 
+function decryptAllPassword(manager){
+    manager.forEach(item => {
+        item.password = decryptPassword(item.password)    
+    })
+    return manager
+}
+
 export {
     validatetionAndSendUserIfTokenCorrect,
     encryptPassword,
+    decryptAllPassword,
     decryptPassword
 }

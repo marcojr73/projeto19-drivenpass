@@ -31,7 +31,7 @@ async function getAllCredentials(req: Request, res: Response){
 
     const userId = await utils.validatetionAndSendUserIfTokenCorrect(token)
     let allCredentials = await credentialsServices.getAllCredentialsPerUser(userId)
-    allCredentials = await credentialsServices.decryptAllPassword(allCredentials)
+    allCredentials = await utils.decryptAllPassword(allCredentials)
 
     res.status(200).send(allCredentials)
 }

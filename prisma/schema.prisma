@@ -19,7 +19,6 @@ model wifi {
   userId            Int
   createdAt         DateTime @default(now())
 
-  @@unique([title, userId])
 }
 
 model credentials {

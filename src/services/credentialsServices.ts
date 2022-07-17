@@ -33,12 +33,7 @@ async function getAllCredentialsPerUser(userId: number){
     return await credentialsRepositories.listAllCredentialsByUserId(userId)
 }
 
-function decryptAllPassword(allCredentials){
-    allCredentials.forEach(credential => {
-        credential.password = utils.decryptPassword(credential.password)    
-    })
-    return allCredentials
-}
+
 
 async function deleteCredential(credentialId: number){
     await credentialsRepositories.deleteCrdentialById(credentialId)
@@ -48,7 +43,6 @@ export {
     insertAnNewCredential,
     getAllCredentialsPerUser,
     verifyTitleIsUnique,
-    decryptAllPassword,
     getCredentialAndVerifyMaster,
     deleteCredential
 }

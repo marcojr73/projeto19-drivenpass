@@ -19,17 +19,20 @@ async function getWifi(req: Request, res: Response){
     const token: string = req.headers.authorization.replace("Bearer", "").trim()
     
     const userId = await utils.validatetionAndSendUserIfTokenCorrect(token)
-    
-    res.status(200).send("bala azul")
+    const wifi = await wifiServices.getWifiAndVerifyMaster(id, userId)
+    wifi.password = utils.decryptPassword(wifi.password)
+
+    res.status(200).send(wifi)
 }
 
 async function getAllWifi(req: Request, res: Response){
     const token: string = req.headers.authorization.replace("Bearer", "").trim()
     
     const userId = await utils.validatetionAndSendUserIfTokenCorrect(token)
-    const allWireless = await wifiServices.getAllWireless(userId)
+    let allWireless = await wifiServices.getAllWireless(userId)
+    allWireless = await utils.decryptAllPassword(allWireless)
     
-    res.status(200).send("bala azul")
+    res.status(200).send(allWireless)
 }
 
 async function deleteAnWifi(req: Request, res: Response){
