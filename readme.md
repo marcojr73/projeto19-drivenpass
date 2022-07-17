@@ -24,7 +24,7 @@ Install my-project with npm
 
 #### Sign-up
 
-```http
+```
   POST /sign-up
 ```
 
@@ -35,7 +35,7 @@ Install my-project with npm
 
 #### Sign-in
 
-```http
+```
   POST /sign-in
 ```
 
@@ -46,7 +46,7 @@ Install my-project with npm
 
 #### Create Card 
 
-```http
+```
   POST /card/create
 ```
 
@@ -65,7 +65,7 @@ types must be credit or debit
 
 #### Views the cards
 
-```http
+```
   GET /card
 ```
 
@@ -75,7 +75,7 @@ types must be credit or debit
 
 #### View an card
 
-```http
+```
   GET /card/:id
 ```
 
@@ -85,7 +85,7 @@ types must be credit or debit
 
 #### Delete an card
 
-```http
+```
   DELETE /card/delete/:id
 ```
 
@@ -95,7 +95,7 @@ types must be credit or debit
 
 #### Create credential
 
-```http
+```
   GET /credentials/create
 ```
 
@@ -109,7 +109,7 @@ types must be credit or debit
 
 #### Views the credentials
 
-```http
+```
   GET /credentials
 ```
 
@@ -119,7 +119,7 @@ types must be credit or debit
 
 #### View an credential
 
-```http
+```
   GET /credentials/:id
 ```
 
@@ -129,7 +129,7 @@ types must be credit or debit
 
 #### Delete an credential
 
-```http
+```
   DELETE /credentials/delete/:id
 ```
 
@@ -137,9 +137,9 @@ types must be credit or debit
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 
-#### create security note
+#### Create security note
 
-```http
+```
   POST /notes/create
 ```
 
@@ -151,7 +151,7 @@ types must be credit or debit
 
 #### view the secure notes
 
-```http
+```
   GET /notes/
 ```
 
@@ -161,7 +161,7 @@ types must be credit or debit
 
 #### view a secure note
 
-```http
+```
   GET /notes/:id
 ```
 
@@ -171,7 +171,7 @@ types must be credit or debit
 
 #### Delete a secure note
 
-```http
+```
   DELETE /notes/delete/:id
 ```
 
@@ -179,9 +179,9 @@ types must be credit or debit
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 
-#### create security note
+#### Create security note
 
-```http
+```
   POST /wifi/create
 ```
 
@@ -192,9 +192,9 @@ types must be credit or debit
 | `body` |`password` | `string` | **Required**  |
 | `body` |`title` | `string` | **Required**  |
 
-#### view the wifi
+#### View the wifi
 
-```http
+```
   GET /wifi
 ```
 
@@ -203,9 +203,9 @@ types must be credit or debit
 | `header` |`authorization` | `Bearer string` | **Required**  |
 
 
-#### view a wifi
+#### View a wifi
 
-```http
+```
   GET /wifi/:id
 ```
 
@@ -213,19 +213,13 @@ types must be credit or debit
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 
-#### delete a wifi
+#### Delete a wifi
 
-```http
+```
   DELETE /wifi/:id
 ```
 
 | type |Parameter | Type     |                 |
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
-
-
-
-#### add(num1, num2)
-
-Takes two numbers and returns the sum.
 
