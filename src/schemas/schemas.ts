@@ -28,9 +28,16 @@ const dataCardIsCorrect = joi.object({
     title: joi.string().required()
 })
 
+const dataWifiIsCorrect = joi.object({
+    nameWireless: joi.string().required(),
+    password: joi.string().required(),
+    title: joi.string().required()
+})
+
 export {
     dataSignInUp,
     dataCredentialsisCorrect,
     dataNotesIsCorrect,
-    dataCardIsCorrect
+    dataCardIsCorrect,
+    dataWifiIsCorrect
 }

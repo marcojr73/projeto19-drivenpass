@@ -51,8 +51,6 @@ async function deleteAnCard(req: Request, res: Response){
     res.status(204).send("deleted")
 }
 
-
-
 export {
     insertNewCard,
     getAllCards,
