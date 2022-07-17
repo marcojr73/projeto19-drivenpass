@@ -1,0 +1,821 @@
+{
+	"info": {
+		"_postman_id": "27732a55-9c09-4fc5-bd2f-ab65d6f64ebb",
+		"name": "drivenpassCollectionTests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21326076"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "http://localhost:5000/sign-in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"mar@driven.com\",\n    \"password\": \"4815162342\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/sign-in",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"mar@driven.com\",\n    \"password\": \"4815162342\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/sign-up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "credential",
+			"item": [
+				{
+					"name": "http://localhost:5000/credentials/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE3LCJpYXQiOjE2NTgwOTgwODMsImV4cCI6MTY1ODcwMjg4M30.ZAH5-MJLnh4VMDpkFIcmFqLMI1rSILIQ2QKbY1_Kkkw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"url\": \"https://www.youtube.com/shorts/i0zptaVOTxA\",\n    \"userName\": \"osvaldo\",\n    \"password\": \"4815162342\",\n    \"title\": \"osvaldo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/credentials/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"credentials",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/credentials/",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTgwODYwMjQsImV4cCI6MTY1ODY5MDgyNH0.n0ronwZ1qv8a-1qICttphsGhWpiQOlWoA50YPNPrY0s",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJpYXQiOjE2NTgwODYwNjcsImV4cCI6MTY1ODY5MDg2N30.Jp4S5lBPaCUVWnjZGqRjBrvbwpeGvXFwCYtv3T7T8RI",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJpYXQiOjE2NTgwODYxMDAsImV4cCI6MTY1ODY5MDkwMH0.V9M2h9zZaZqcxrTi48-d567e_xYuJeXTScDGd-sUHZw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/credentials",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"credentials"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/credentials/33",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJpYXQiOjE2NTgwODYwNjcsImV4cCI6MTY1ODY5MDg2N30.Jp4S5lBPaCUVWnjZGqRjBrvbwpeGvXFwCYtv3T7T8RI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/credentials/33",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"credentials",
+								"33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/credentials/delete/33",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTgwODYwMjQsImV4cCI6MTY1ODY5MDgyNH0.n0ronwZ1qv8a-1qICttphsGhWpiQOlWoA50YPNPrY0s",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJpYXQiOjE2NTgwODYwNjcsImV4cCI6MTY1ODY5MDg2N30.Jp4S5lBPaCUVWnjZGqRjBrvbwpeGvXFwCYtv3T7T8RI",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJpYXQiOjE2NTgwODYxMDAsImV4cCI6MTY1ODY5MDkwMH0.V9M2h9zZaZqcxrTi48-d567e_xYuJeXTScDGd-sUHZw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/credentials/delete/33",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"credentials",
+								"delete",
+								"33"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cards",
+			"item": [
+				{
+					"name": "http://localhost:5000/card/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTgwODYwMjQsImV4cCI6MTY1ODY5MDgyNH0.n0ronwZ1qv8a-1qICttphsGhWpiQOlWoA50YPNPrY0s",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJpYXQiOjE2NTgwODYwNjcsImV4cCI6MTY1ODY5MDg2N30.Jp4S5lBPaCUVWnjZGqRjBrvbwpeGvXFwCYtv3T7T8RI",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJpYXQiOjE2NTgwODYxMDAsImV4cCI6MTY1ODY5MDkwMH0.V9M2h9zZaZqcxrTi48-d567e_xYuJeXTScDGd-sUHZw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number\": \"4815\", \n    \"nameCard\": \"marcola\", \n    \"cvc\": \"789\", \n    \"expirationDate\": \"07/04\", \n    \"password\": \"4815\", \n    \"isVirtual\": false, \n    \"type\": \"credit\",\n    \"title\": \"aaaaaaaaaaaaaaaaaaaaa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/card/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"card",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/card",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTgwODYwMjQsImV4cCI6MTY1ODY5MDgyNH0.n0ronwZ1qv8a-1qICttphsGhWpiQOlWoA50YPNPrY0s",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJpYXQiOjE2NTgwODYwNjcsImV4cCI6MTY1ODY5MDg2N30.Jp4S5lBPaCUVWnjZGqRjBrvbwpeGvXFwCYtv3T7T8RI",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJpYXQiOjE2NTgwODYxMDAsImV4cCI6MTY1ODY5MDkwMH0.V9M2h9zZaZqcxrTi48-d567e_xYuJeXTScDGd-sUHZw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/card",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"card"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": null,
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": null,
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/card/21",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTgwODYwMjQsImV4cCI6MTY1ODY5MDgyNH0.n0ronwZ1qv8a-1qICttphsGhWpiQOlWoA50YPNPrY0s",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJpYXQiOjE2NTgwODYwNjcsImV4cCI6MTY1ODY5MDg2N30.Jp4S5lBPaCUVWnjZGqRjBrvbwpeGvXFwCYtv3T7T8RI",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJpYXQiOjE2NTgwODYxMDAsImV4cCI6MTY1ODY5MDkwMH0.V9M2h9zZaZqcxrTi48-d567e_xYuJeXTScDGd-sUHZw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/card/21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"card",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/card/delete/19",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTgwODYwMjQsImV4cCI6MTY1ODY5MDgyNH0.n0ronwZ1qv8a-1qICttphsGhWpiQOlWoA50YPNPrY0s",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJpYXQiOjE2NTgwODYwNjcsImV4cCI6MTY1ODY5MDg2N30.Jp4S5lBPaCUVWnjZGqRjBrvbwpeGvXFwCYtv3T7T8RI",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJpYXQiOjE2NTgwODYxMDAsImV4cCI6MTY1ODY5MDkwMH0.V9M2h9zZaZqcxrTi48-d567e_xYuJeXTScDGd-sUHZw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number\": \"4815\", \n    \"nameCard\": \"marcola\", \n    \"cvc\": \"789\", \n    \"expirationDate\": \"07/04\", \n    \"password\": \"4815\", \n    \"isVirtual\": false, \n    \"type\": \"debito\",\n    \"title\": \"uhul\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/card/delete/19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"card",
+								"delete",
+								"19"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "notes",
+			"item": [
+				{
+					"name": "http://localhost:5000/notes/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTgwODYwMjQsImV4cCI6MTY1ODY5MDgyNH0.n0ronwZ1qv8a-1qICttphsGhWpiQOlWoA50YPNPrY0s",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJpYXQiOjE2NTgwODYwNjcsImV4cCI6MTY1ODY5MDg2N30.Jp4S5lBPaCUVWnjZGqRjBrvbwpeGvXFwCYtv3T7T8RI",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJpYXQiOjE2NTgwODYxMDAsImV4cCI6MTY1ODY5MDkwMH0.V9M2h9zZaZqcxrTi48-d567e_xYuJeXTScDGd-sUHZw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"user3\",\n    \"note\": \"lolo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/notes/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"notes",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/notes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTgwODYwMjQsImV4cCI6MTY1ODY5MDgyNH0.n0ronwZ1qv8a-1qICttphsGhWpiQOlWoA50YPNPrY0s",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJpYXQiOjE2NTgwODYwNjcsImV4cCI6MTY1ODY5MDg2N30.Jp4S5lBPaCUVWnjZGqRjBrvbwpeGvXFwCYtv3T7T8RI",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJpYXQiOjE2NTgwODYxMDAsImV4cCI6MTY1ODY5MDkwMH0.V9M2h9zZaZqcxrTi48-d567e_xYuJeXTScDGd-sUHZw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/notes/21",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTgwODYwMjQsImV4cCI6MTY1ODY5MDgyNH0.n0ronwZ1qv8a-1qICttphsGhWpiQOlWoA50YPNPrY0s",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJpYXQiOjE2NTgwODYwNjcsImV4cCI6MTY1ODY5MDg2N30.Jp4S5lBPaCUVWnjZGqRjBrvbwpeGvXFwCYtv3T7T8RI",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJpYXQiOjE2NTgwODYxMDAsImV4cCI6MTY1ODY5MDkwMH0.V9M2h9zZaZqcxrTi48-d567e_xYuJeXTScDGd-sUHZw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/notes/21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"notes",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/notes/delete/22",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTgwODYwMjQsImV4cCI6MTY1ODY5MDgyNH0.n0ronwZ1qv8a-1qICttphsGhWpiQOlWoA50YPNPrY0s",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJpYXQiOjE2NTgwODYwNjcsImV4cCI6MTY1ODY5MDg2N30.Jp4S5lBPaCUVWnjZGqRjBrvbwpeGvXFwCYtv3T7T8RI",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJpYXQiOjE2NTgwODYxMDAsImV4cCI6MTY1ODY5MDkwMH0.V9M2h9zZaZqcxrTi48-d567e_xYuJeXTScDGd-sUHZw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/notes/delete/22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"notes",
+								"delete",
+								"22"
+							],
+							"query": [
+								{
+									"key": "authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTgwODYwMjQsImV4cCI6MTY1ODY5MDgyNH0.n0ronwZ1qv8a-1qICttphsGhWpiQOlWoA50YPNPrY0s",
+									"disabled": true
+								},
+								{
+									"key": "authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJpYXQiOjE2NTgwODYwNjcsImV4cCI6MTY1ODY5MDg2N30.Jp4S5lBPaCUVWnjZGqRjBrvbwpeGvXFwCYtv3T7T8RI",
+									"disabled": true
+								},
+								{
+									"key": "authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJpYXQiOjE2NTgwODYxMDAsImV4cCI6MTY1ODY5MDkwMH0.V9M2h9zZaZqcxrTi48-d567e_xYuJeXTScDGd-sUHZw",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wifi",
+			"item": [
+				{
+					"name": "http://localhost:5000/wifi/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTgwODYwMjQsImV4cCI6MTY1ODY5MDgyNH0.n0ronwZ1qv8a-1qICttphsGhWpiQOlWoA50YPNPrY0s",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJpYXQiOjE2NTgwODYwNjcsImV4cCI6MTY1ODY5MDg2N30.Jp4S5lBPaCUVWnjZGqRjBrvbwpeGvXFwCYtv3T7T8RI",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJpYXQiOjE2NTgwODYxMDAsImV4cCI6MTY1ODY5MDkwMH0.V9M2h9zZaZqcxrTi48-d567e_xYuJeXTScDGd-sUHZw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nameWireless\": \"marcola\",\n    \"password\": \"4815\",\n    \"title\": \"user3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/wifi/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"wifi",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/wifi/6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTgwODYwMjQsImV4cCI6MTY1ODY5MDgyNH0.n0ronwZ1qv8a-1qICttphsGhWpiQOlWoA50YPNPrY0s",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJpYXQiOjE2NTgwODYwNjcsImV4cCI6MTY1ODY5MDg2N30.Jp4S5lBPaCUVWnjZGqRjBrvbwpeGvXFwCYtv3T7T8RI",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJpYXQiOjE2NTgwODYxMDAsImV4cCI6MTY1ODY5MDkwMH0.V9M2h9zZaZqcxrTi48-d567e_xYuJeXTScDGd-sUHZw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/wifi/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"wifi",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/wifi/delete/8",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTgwODYwMjQsImV4cCI6MTY1ODY5MDgyNH0.n0ronwZ1qv8a-1qICttphsGhWpiQOlWoA50YPNPrY0s",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE1LCJpYXQiOjE2NTgwODYwNjcsImV4cCI6MTY1ODY5MDg2N30.Jp4S5lBPaCUVWnjZGqRjBrvbwpeGvXFwCYtv3T7T8RI",
+								"type": "text"
+							},
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJpYXQiOjE2NTgwODYxMDAsImV4cCI6MTY1ODY5MDkwMH0.V9M2h9zZaZqcxrTi48-d567e_xYuJeXTScDGd-sUHZw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/wifi/delete/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"wifi",
+								"delete",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:5000/wifi/",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJpYXQiOjE2NTgwODYwMjQsImV4cCI6MTY1ODY5MDgyNH0.n0ronwZ1qv8a-1qICttphsGhWpiQOlWoA50YPNPrY0s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/wifi/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"wifi",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
