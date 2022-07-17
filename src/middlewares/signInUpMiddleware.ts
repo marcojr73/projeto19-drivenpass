@@ -6,8 +6,6 @@ async function validateDataSignInUp(req: Request, res: Response, next: NextFunct
 
     await dataSignInUp.validateAsync({email, password})
 
-    
-
     next()
 }
 
