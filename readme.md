@@ -8,7 +8,7 @@
 
 ## Usage
 
-Install my-project with npm
+Install my-project with npm and configure .env
 
 ```bash
   git clone git@github.com:marcojr73/projeto19-drivenpass.git
