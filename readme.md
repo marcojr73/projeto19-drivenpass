@@ -216,7 +216,7 @@ types must be credit or debit
 #### Delete a wifi
 
 ```
-  DELETE /wifi/:id
+  DELETE /wifi/delete/:id
 ```
 
 | sent by |Parameter | Type     |                 |
