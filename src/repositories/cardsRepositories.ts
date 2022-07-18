@@ -37,7 +37,8 @@ async function getCardById(id: number){
             password: true,
             userId: true,
             number: true,
-            isVirtual: true
+            isVirtual: true,
+            type: true
         },
         where: {id}
     })
