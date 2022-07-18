@@ -8,6 +8,7 @@ export type cardsData = Omit<cards, "id" | "createdAt">
 async function getAllCardsByUserId(userId: number){
     return await client.cards.findMany({
         select: {
+            id: true,
             nameCard: true,
             cvc: true,
             expirationDate: true,

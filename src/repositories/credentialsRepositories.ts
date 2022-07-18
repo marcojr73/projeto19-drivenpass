@@ -26,6 +26,7 @@ async function getCredentialById(id: number){
 async function listAllCredentialsByUserId(userId: number){
     return await client.credentials.findMany({
         select:{
+            id: true,
             url: true,
             userName: true,
             password: true,

@@ -8,6 +8,7 @@ export type wifiData = Omit<wifi, "id" | "createdAt">
 async function getAllWirelessByUserId(userId: number){
     return await client.wifi.findMany({
         select:{
+            id: true,
             nameWireless: true,
             password: true,
             title: true,

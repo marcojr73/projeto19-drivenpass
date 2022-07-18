@@ -7,6 +7,7 @@ export type notesData = Omit<security_notes, "id" | "createdAt">
 async function getAllNotesByUser(userId){
     return await client.security_notes.findMany({
         select: {
+            id: true,
             note: true,
             title: true,
             userId: true
