@@ -96,7 +96,7 @@ types must be credit or debit
 #### Create credential
 
 ```
-  GET /credentials/create
+  POST /credentials/create
 ```
 
 | sent by |Parameter | Type     |                 |
