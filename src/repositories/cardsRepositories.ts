@@ -15,7 +15,8 @@ async function getAllCardsByUserId(userId: number){
             password: true,
             userId: true,
             number: true,
-            isVirtual: true
+            isVirtual: true,
+            type: true
         },
         where: {userId}
     })
