@@ -179,7 +179,7 @@ types must be credit or debit
 | :-------- |:-------- | :------- | :------------------------- |
 | `header` |`authorization` | `Bearer string` | **Required**  |
 
-#### Create security note
+#### Create wifi
 
 ```
   POST /wifi/create
