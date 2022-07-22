@@ -24,8 +24,4 @@ app.use(wifiRouter)
 
 app.use(errorHandler)
 
-const PORT = +process.env.PORT || 4000
-
-app.listen(PORT,()=>{
-    console.log(`Server up on port ${PORT}`)
-})
+export default app
