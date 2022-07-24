@@ -16,6 +16,8 @@ Install my-project with npm and configure .env
 
 ```bash
   npm install
+
+  npx prisma migrate dev
   
   npm run dev
 ```
