@@ -5,6 +5,6 @@ import validateDataSignInUp from "../middlewares/signInUpMiddleware.js";
 const authRouter = Router()
 
 authRouter.post("/sign-up", validateDataSignInUp, signUp)
-authRouter.post("/sign-in", validateDataSignInUp, signIn)
+authRouter.post("/sign-in", signIn)
 
 export default authRouter
