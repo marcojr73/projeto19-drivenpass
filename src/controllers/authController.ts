@@ -20,7 +20,7 @@ async function signIn(req: Request, res: Response){
     authService.verifyPasswordIsCorrect(password, user.password)
     const token = authService.generateToken(user.id)
 
-    res.status(200).send(token)
+    res.status(201).send(token)
 }
 
 export {
