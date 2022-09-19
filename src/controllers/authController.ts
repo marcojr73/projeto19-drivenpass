@@ -18,8 +18,7 @@ async function signIn(req: Request, res: Response){
 
     const user = await authService.verifyAndGetIfUserExists(email)
     authService.verifyPasswordIsCorrect(password, user.password)
-    const token = "oi"
-    // const token = authService.generateToken(user.id)
+    const token = authService.generateToken(user.id)
 
     res.status(201).send(token)
 }
