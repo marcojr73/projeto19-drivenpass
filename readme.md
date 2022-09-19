@@ -11,6 +11,9 @@
 - *Só que como vamos memorizar senhas gigantes e sem significado semântico?* É para resolver essa dor de cabeça que surgiu o Driven pass! Com ele, criamos apenas uma senha “mestra” e todas as outras senhas ficam gravadas em segredo! Logo, quando precisamos dela, basta lembrar da senha “mestra”!
 - Podemos armazenar Senhas de cartões, wifi, web sites e criar notas, tudo de forma segura e criptografada 
 
+- [Veja meu deploy na heroku aqui](https://drivenpass-api-mj.herokuapp.com/)
+- [Veja meu repositório front end desta aplicação aqui](https://github.com/marcojr73/drivenPass)
+
 ## Usage
 
 Install my-project with npm and configure .env
@@ -26,6 +29,21 @@ Install my-project with npm and configure .env
   
   npm run dev
 ```
+
+***
+
+##	 Tecnologias e Conceitos
+
+- Node.js
+- Typescript
+- Express
+- Criptografia de senhas
+- Joi
+- Validação de token JWT
+- Prisma
+- Testes de integração
+
+***
     
 ## API Reference
 
